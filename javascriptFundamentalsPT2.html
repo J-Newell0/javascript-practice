@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fundamentals pt2</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+
+/* $$$$$$$$$$$$$$$$   Creating a String   $$$$$$$$$$$$$$$$ */
+    let string = 'The revolution will not be televised.';
+    string;
+
+    /*Examples of bad strings
+
+        let badString1 = this is a test;
+        let badString2 = 'This is a test;
+        let badString3 =  This is a test';
+
+    */
+   let badString = string;
+   badString;
+
+/* $$$$$$$$$$$$$$$$   Single quotes VS Double quotes   $$$$$$$$$$$$$$$$ */
+
+let sgl = 'Single quotes.';
+let dbl = "Double quotes.";
+sgl;
+dbl;
+
+/*   ---- Can't differ in the quotes used. PICK ONE and be consistent
+    to the browser this means the sting was never closed.
+
+        let badQuotes = 'What on Earth?";
+    
+*/
+
+let sglDbl = 'Would you eat a "fish supper"?';
+let dblSgl = "I'm feeling blue.";
+sglDbl;
+dblSgl;
+
+/*   ---- Will not work because of the apostophe within I've causing 
+        the browser to believe bigmouth = 'I'
+
+        let bigmouth = 'I've got no right to take my place...';
+*/
+
+/* $$$$$$$$$$$$$$$$   Escaping character in a String  $$$$$$$$$$$$$$$$ 
+    $$$$$$$$$$$$$$$$   This fixes the previous issue using the quote marks within a sring*/
+
+    let bigmouth = 'I\'ve got no right to take my place...';
+    bigmouth;
+   
+/* $$$$$$$$$$$$$$$$ Concatenating "Joining together" Strings  $$$$$$$$$$$$$$$$ */
+
+    let one = 'Hello, ';
+    let two = 'how are you?';
+    let joined = one + two;
+    joined;
+
+    /* Multiple cancatenations */ 
+    let multiple = one + one + one + one + two;
+    multiple;
+
+    /* Mix of variables and actual defined strings 
+            Also known as a STRING LITERAL*/
+     let respo = one + 'I am fime - ' + two;
+     respo;
+
+     /* Numbers vs. Strings  */
+        console.log('front ' + 242);
+        let myDate = '19' + '93';
+        
+        /* typeof checks wether variable is a number or string */
+        typeof myDate;
+  </script>
+</body>
+</html>    

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fundamentals pt2</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+
+/* $$$$$$$$$$$$$$$$   Creating a String   $$$$$$$$$$$$$$$$ */
+    let string = 'The revolution will not be televised.';
+    string;
+
+    /*Examples of bad strings
+
+        let badString1 = this is a test;
+        let badString2 = 'This is a test;
+        let badString3 =  This is a test';
+
+    */
+   let badString = string;
+   badString;
+
+/* $$$$$$$$$$$$$$$$   Single quotes VS Double quotes   $$$$$$$$$$$$$$$$ */
+
+let sgl = 'Single quotes.';
+let dbl = "Double quotes.";
+sgl;
+dbl;
+
+/*   ---- Can't differ in the quotes used. PICK ONE and be consistent
+    to the browser this means the sting was never closed.
+
+        let badQuotes = 'What on Earth?";
+    
+*/
+
+let sglDbl = 'Would you eat a "fish supper"?';
+let dblSgl = "I'm feeling blue.";
+sglDbl;
+dblSgl;
+
+/*   ---- Will not work because of the apostophe within I've causing 
+        the browser to believe bigmouth = 'I'
+
+        let bigmouth = 'I've got no right to take my place...';
+*/
+
+/* $$$$$$$$$$$$$$$$   Escaping character in a String  $$$$$$$$$$$$$$$$ 
+    $$$$$$$$$$$$$$$$   This fixes the previous issue using the quote marks within a sring*/
+
+    let bigmouth = 'I\'ve got no right to take my place...';
+    bigmouth;
+   
+/* $$$$$$$$$$$$$$$$ Concatenating "Joining together" Strings  $$$$$$$$$$$$$$$$ */
+
+    let one = 'Hello, ';
+    let two = 'how are you?';
+    let joined = one + two;
+    joined;
+
+    /* Multiple cancatenations */ 
+    let multiple = one + one + one + one + two;
+    multiple;
+
+    /* Mix of variables and actual defined strings 
+            Also known as a STRING LITERAL*/
+     let respo = one + 'I am fime - ' + two;
+     respo;
+
+     /* Numbers vs. Strings  */
+        console.log('front ' + 242);
+        let myDate = '19' + '93';        
+      /* typeof checks wether variable is a number or string */
+        typeof myDate;
+
+      /* Number()    object converts anything passed to it into a number, if possible */
+        let myString = '123';
+        let myNum = Number(myString);
+        typeof myNum;
+
+      /* toString()   changes any number into a string */
+        let myNum2 = 123;
+        let myString2 = myNum2.toString();
+        typeof myString2;
+
+
+  /* $$$$$$$$$$$$$$$$ Template literals  $$$$$$$$$$$$$$$$ 
+      Provides Flexible, Easy to Read Strings 
+      Standard String Literal to Template Literal, you must replace Quote marks ("" or '')
+        with backticks ( `  ` )   */
+
+      /* let song = 'Fight the Youth';
+          this is standard String, */
+
+          song = `Fight the Youth`;
+
+          let score = 9;
+          let highestScore = 10;
+         /* let output = 'I like the song :' + song + '". I gave it a score of ' + (score/highestScore * 100) + '%. '; */
+
+          /* These concatanations can be confusing to write/read. Simplify them by using Template Literals
+              this will be the output using Template Literals and the ${ } placeholder  */
+
+          output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 } %.`;
+
+          let examScore = 45;
+          let examHighestScore = 70;
+          examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round(examScore/examHighestScore*100) }%). \n ${ examScore >= 49? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.'}`;
+  
+  
+  /* $$$$$$$$$$$$$$$$ if, else, else if Conditionals $$$$$$$$$$$$$$$$ 
+
+      $$$$$$$$$$ IF STATEMENT $$$$$$$$$$ 
+      
+      if (hour < 18) {
+        greeting = "Good Day";  
+      }
+      $$$$$$$$$$ Runs when (condition) is true only, otherwise this line is skipped
+
+     $$$$$$$$$$ ELSE STATEMENT $$$$$$$$$$  
+      
+      if (hour < 18){
+          greeting = "Good Day";
+      } else {
+        greeting = "Good Evening";
+      }  
+      $$$$$$$$$$ If (conditional) is false, insead of ignoring this line the browser will run 
+                  the else statement.
+
+    $$$$$$$$$$ ELSE IF STATEMENT $$$$$$$$$$ 
+
+      if (condition1) {
+        // This block will run if condition1 is TRUE
+      } else if (condition2) {
+        //This block only runs if condition1 is FALSE and condition2 is TRUE
+      } else {
+        // This block only runs if both condition1 and condition2 are FALSE
+      }
+
+    
+    $$$$$$$$$$ Switch Statements $$$$$$$$$$ 
+
+      switch (expression) {
+        case choice1:
+          run this code
+          break;
+
+        case choice2:
+          run this code instead
+          break;
+
+        // include as many cases as you like
+
+        default:
+          actually, just run this code
+      }
+  */
+
+
+  let days = 31;
+if (choice === feburary){
+  let days = 28;}
+else if (choice === april || choice === june || choice === september || choice === november){
+	let days = 30;
+}
+
+	
+switch(choice){
+	case 'White':
+	update('White', 'Black');
+	case 'Black':
+	update('Black', 'White');
+	case 'Purple':
+	update('Purple', 'White');
+	case 'Yellow':
+	update('Yellow', 'Black');
+	case 'Psychedelic':
+	update('Psychedelic', 'White');
+	
+
+        
+  </script>
+</body>
+</html>    
